@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M6U-lg-1mv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="M6V-Lx-Mqn">
+            <objects>
+                <collectionViewController id="uJs-Tu-lqY" customClass="ViewController" customModule="Project25MultipeerConnections" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="NkV-hF-5ha">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R6P-wN-e2X">
+                            <size key="itemSize" width="145" height="145"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageView" id="aRU-mZ-agP">
+                                <rect key="frame" x="10" y="10" width="145" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VhD-xx-dG9">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iPt-c3-ilA">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iPt-c3-ilA" firstAttribute="centerX" secondItem="VhD-xx-dG9" secondAttribute="centerX" id="BeW-TL-cdR"/>
+                                        <constraint firstItem="iPt-c3-ilA" firstAttribute="centerY" secondItem="VhD-xx-dG9" secondAttribute="centerY" id="gdf-PI-Ii0"/>
+                                        <constraint firstItem="iPt-c3-ilA" firstAttribute="top" secondItem="VhD-xx-dG9" secondAttribute="top" id="hzs-HD-Opc"/>
+                                        <constraint firstItem="iPt-c3-ilA" firstAttribute="leading" secondItem="VhD-xx-dG9" secondAttribute="leading" id="yeT-D0-8kk"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="uJs-Tu-lqY" id="RHm-fg-CrZ"/>
+                            <outlet property="delegate" destination="uJs-Tu-lqY" id="qdH-Si-aEF"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="NrP-Mh-dvd"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FfC-ox-rOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160.8695652173915" y="-29.464285714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xye-I1-AZX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M6U-lg-1mv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U8c-Cv-ttd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uJs-Tu-lqY" kind="relationship" relationship="rootViewController" id="aAI-tb-lZi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ou-gB-Naj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250.72463768115944" y="-29.464285714285712"/>
+        </scene>
+    </scenes>
+</document>
